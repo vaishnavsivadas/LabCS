@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<title>CS Lab Module</title>
+	<meta name="desciption" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+	<!-- BS JavaScript -->
+	<script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+	<script>
+		$(window).on('scroll', function(){
+  			if($(window).scrollTop()){
+  			  $('nav').addClass('black');
+ 			 }else {
+ 		   $('nav').removeClass('black');
+ 		 }
+		})
+	</script>
+</head>
+<body>
+<!-- Navigation Bar -->
+	<header id="header">
+		<nav>
+			<ul>
+				<li><a class="active" href="">Home</a></li>
+				<li><a href="#course_section">Training Modules</a></li>
+				<li><a href="#services_section">Assessments</a></li>
+				<li><a href="#contactus_section">Feedback</a></li>
+				<li><a class="get-started" href="login.html">Get Started</a></li>
+			</ul>
+			
+		</nav>
+		
+		<div class="head-container">
+			<div class="quote">
+				<p>Welcome to the CS Lab Self Study Platform</p>
+				<div class="play">
+					<img src="images/icon/play.png" alt="play"><span><a target="_blank">Know More</a></span>
+				</div>
+			</div>
+			<div class="svg-image">
+				<img src="images/extra/cslab.png" alt="svg">
+			</div>
+		</div>
+	</header>
+
+
+<!-- Some Popular Subjects -->
+	<div class="title" id="course_section">
+		<span>Popular Subjects</span>
+	</div>
+	<br><br>
+	<div class="course" >
+		<center><div class="cbox">
+		<div class="det"><a href="ctfLanding.html"><img src="images/Icons/right.svg">CTF Challenges</a></div>
+		<div class="det"><a href="subjects/gate.html"><img src="">Sample 1</a></div>
+		<div class="det"><a href="subjects/jee.html#sample_papers"><img src="">Sample 2</a></div>
+		<div class="det"><a href="subjects/quiz.html"><img src="">Sample 3</a></div>
+		</div></center>
+		<div class="cbox">
+		<div class="det"><a href="subjects/computer_courses.html"><img src="">Sample 4</a></div>
+		<div class="det"><a href="subjects/computer_courses.html#data"><img src="">Sample 5</a></div>
+		<div class="det"><a href="subjects/computer_courses.html#algo"><img src="">Sample 6</a></div>
+		<div class="det det-last"><a href="subjects/computer_courses.html#projects"><img src="">Sample 7</a></div>
+		</div>
+	</div>
+
+	
+<!-- ABOUT -->
+	<div class="diffSection" id="about_section">
+		<center><p style="font-size: 50px; padding: 100px">About The Platform</p></center>
+		<div class="about-content">
+				<div class="side-image">
+					<img class="sideImage" src="images/extra/e3.png">
+				</div>
+				<div class="side-text">
+					<p>This initiative aims at providing practical training for trainees taking up courses related to Cyber Security at ITS, INS Valsura. The content is structured in such a way that after completion of each training module, the practical assessment can be completed here. Moreover we also intend to give exposure to CTF (Capture The Flag) challenges for the trainees by integrating support to PicoCTF.</p>
+				</div>
+		</div>
+		<br><br>
+	</div>
+
+
+<!-- DATA -->
+	<div class="extra">
+		<p>The data so far</p>
+		<div class="smbox">
+		<span><center><div class="data">154</div><div class="det">Enrolled Students</div></center></span>
+		<span><center><div class="data">62</div><div class="det">Total Courses</div></center></span>
+		</div>
+	</div>
+
+<!-- CONTACT US -->
+	<div class="diffSection" id="contactus_section">
+		<center><p style="font-size: 50px; padding: 100px">Feedback</p></center>
+		<div class="csec"></div>
+		<div class="back-contact">
+			<div class="cc">
+			<form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
+				<label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name <span class="imp">*</span></label><br>
+				<center>
+				<input type="text" name="" style="margin-right: 10px; width: 175px" required="required"><input type="text" name="lname" style="width: 175px" required="required"><br>
+				</center>
+				<label>Email <span class="imp">*</span></label><br>
+				<input type="email" name="mail" style="width: 100%" required="required"><br>
+				<label>Message <span class="imp">*</span></label><br>
+				<input type="text" name="message" style="width: 100%" required="required"><br>
+				<label>Additional Details</label><br>
+				<textarea name="addtional"></textarea><br>
+				<button type="submit" id="csubmit">Send Message</button>
+			</form>
+			</div>
+		</div>
+	</div>
+
+<!-- Sliding Information -->
+	<marquee style="background: linear-gradient(to right,  #0a1956,  #030e3a); margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20"><div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”</div></marquee>
+
+<!-- FOOTER -->
+	<footer>
+		<div class="footer-container">
+			<div class="left-col">
+				</br></br>
+				<div class="quote">
+					<p style="color: #fff">Cyber Security Self Study Platform</p>
+				</div>
+				<div class="logo"></div>
+				<p class="rights-text">Copyright © 2021</p>
+				<br><p><img src="images/icon/location.png">&nbsp;ITS, INS Valsura, Jamnagar, Gujarat-360115</p>
+			</div>
+			<div class="right-col">
+				<div class="logo">
+					<img src="images/extra/valsura.png">
+					
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
