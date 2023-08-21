@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<title>CS Lab Module</title>
+	<meta name="desciption" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+	<!-- BS JavaScript -->
+	<script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+	<script>
+		$(window).on('scroll', function(){
+  			if($(window).scrollTop()){
+  			  $('nav').addClass('black');
+ 			 }else {
+ 		   $('nav').removeClass('black');
+ 		 }
+		})
+	</script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header id="header">
+    <nav>
+        <ul>
+            <li><a class="active" href="">Home</a></li>
+            <li><a href="#course_section">Training Modules</a></li>
+            <li><a href="#services_section">Assessments</a></li>
+            <li><a href="#contactus_section">Feedback</a></li>
+            <li><a class="get-started" href="login.html">Get Started</a></li>
+        </ul>
+        
+    </nav>
+    
+    <div class="head-container">
+        <div class="quote">
+            <p>Web Based Attack</p>
+        </div>
+        <div class="svg-image">
+            <img src="images/extra/web1.png" alt="svg">
+        </div>
+    </div>
+</header>
+
+<!-- Some Popular Subjects -->
+<div class="title" id="course_section">
+    <span>What is Web-Based Attack ?</span>
+</div>
+<br>
+<p style="padding: 60px;font-size: 18px; text-align: center; background-color: rgb(186, 192, 212); margin: 15px;border-color: #0b1b5b; border-radius: 15px;"> 
+    A web-based attack refers to malicious activities or techniques that target vulnerabilities and weaknesses in web applications, websites, or web servers. 
+    These attacks exploit security gaps in the software or configurations of these online platforms, aiming to compromise data, gain unauthorized access, disrupt services, or execute malicious code.
+    These attacks can lead to data breaches, unauthorized access to sensitive information, financial losses, and disruption of online services.
+</p><br>
+
+<div class="course" >
+    <center><div class="cbox1">
+    <div class="det"><a href="ctfLanding.html"><img src="">Cross Site Scripting</a></div>
+    <div class="det"><a href="subjects/gate.html"><img src="">Application Based</a></div>
+    <div class="det"><a href="subjects/jee.html#sample_papers"><img src="">vulnerability Based</a></div>
+    </div></center>
+</div>
+<style>
+    .cbox1 {
+	position: relative;
+	width: 100%;
+    padding-bottom: 25%;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.cbox1 .det {
+	width: 250px;
+	height: 80px;
+	margin: 10px;
+	background: #fff;
+	cursor: pointer;
+}
+
+.cbox1 .det a{
+	justify-content: space-around;
+	width: 250px;
+	padding: 100px;
+	border-radius: 15px;
+	border: 1px solid #0b1b5b;
+	font-size: 15px;
+	color: #272529;
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+}
+
+</style>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="left-col">
+            </br></br>
+            <div class="quote">
+                <p style="color: #fff">Cyber Security Self Study Platform</p>
+            </div>
+            <div class="logo"></div>
+            <p class="rights-text">Copyright © 2021</p>
+            <br><p><img src="images/icon/location.png">&nbsp;ITS, INS Valsura, Jamnagar, Gujarat-360115</p>
+        </div>
+        <div class="right-col">
+            <div class="logo">
+                <img src="images/extra/valsura.png">
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
