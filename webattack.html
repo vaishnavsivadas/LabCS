@@ -10,7 +10,9 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="script.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-
+    <link rel="stylesheet" href="enlighterjs.min.css">
+    <link rel="stylesheet" type="text/css" href="webattack.css">
+    <script src="enlighterjs.min.js"></script>
 	<!-- BS JavaScript -->
 	<script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
 	<script>
@@ -47,89 +49,7 @@
         </div>
     </div>
 </header>
-<!--Style-->>
 
-<style>
-    .cbox1 {
-	position: relative;
-	width: 100%;
-    padding-bottom: 8%;
-	display: inline-flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.cbox1 .det1 {
-	width: 250px;
-	height: 80px;
-	margin: 10px;
-	background: #fff;
-	cursor: pointer;
-    justify-content: center;
-}
-
-.cbox1 .det1 a{
-	justify-content: center;
-	width: 250px;
-	padding: 25px;
-	border-radius: 15px;
-	border: 1px solid #0b1b5b;
-	font-size: 15px;
-	color: #272529;
-	font-family: 'Open Sans', sans-serif;
-	text-decoration: none;
-}
-.container {
-    justify-content: center;
-	width: 100%;
-	padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-	border-radius: 50px;
-	border: 1px solid #0b1b5b;
-}
-.post_content h2, .lang-ja .post_content h2 {
-    font-size: 2.1rem;
-    line-height: 3.7rem;
-    padding-left: 20px;
-    padding-right: 25px;
-}
-
-.post_content h2, .post_content h3, .post_content h4:not(.caption_title):not(.cta_title), .post_content h5, .post_content h6 {
-    font-family: "neue-haas-grotesk-display",sans-serif !important;
-    font-weight: 600;
-    letter-spacing: 0;
-}
-
-h2 {
-    position: relative;
-    font-size: 7.7rem;
-    line-height: 1.12;
-    letter-spacing: .8rem;
-    margin-bottom: 1rem;
-    color: #292929;
-    font-family: "Fatman-Light",sans-serif !important;
-    font-weight: 400;
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-}
-.post_content h2::before, .lang-ja .post_content h2::before {
-    content: "";
-    width: 5px;
-    background-color: #130c77;
-    height: 2.0rem;
-    display: inline-block;
-    margin-right: 1rem;
-    border-radius: 25%;
-    padding: 1px;
-}
-.post_content p{
-    padding-left: 25px;
-    padding-right: 25px;
-    font-size: medium;
-}
-</style>
 
 
 <!-- Some Popular Subjects -->
@@ -151,13 +71,14 @@ h2 {
     <center><div class="cbox1">
     <div class="det1"><a href="#course_section"><img src="">XSS</a></div>
     <div class="det1"><a href="#course_section"><img src="">Phising</a></div>
-    <div class="det1"><a href="#course_section"><img src="">Vulnerability</a></div>
     <div class="det1"><a href="#course_section"><img src="">SQL Injection</a></div>
+    <div class="det1"><a href="#course_section"><img src="">Vulnerability</a></div>
     </div></center>
 </div>
 
+<!--XSS-->>
 <section class="post_content">
-    <div class="container">
+    <div class="container" style="margin: 15px; width: fit-content;">
         <h2 id="before">What Is Cross-Site Scripting (XSS)?</h2>
         <br>
         <p>
@@ -182,6 +103,12 @@ h2 {
             It is important to note that XSS attack’s mechanics will vary based on the type of attack being deployed. 
             That said, most attacks follow the same process:
         </p>
+        <div>
+            <p style="padding: 30px;font-size: 18px; width:fit-content; text-align: left; background-color: rgb(200, 200, 202); margin: 25px; border-color: #0b1b5b; border-radius: 5px;">
+                &lt;BODY&gt; BACKGROUND = "javascript:alert('XSS')" &gt;&lt;/BODY&gt;
+            </p>
+        </div>
+        
         <br>
         <p>
             <strong>1.</strong> The attacker identifies a place and method for which to inject malicious code into a web page. 
@@ -201,6 +128,98 @@ h2 {
     </div>
 
 </section>
+<br>
+
+<!--Phishing-->>
+<section class="post_content">
+    <div class="container" style="margin: 15px; width: fit-content;">
+        <h2 id="before">What is Phishing ?</h2>
+        <br>
+        <p>
+            Phishing is when cybercriminals send fake messages or create fake websites 
+            that seem real to trick you into giving them your private information, 
+            like passwords or credit card details. They pretend to be trustworthy sources, 
+            like banks or companies, to steal your sensitive data and use it for bad purposes. 
+            Always be careful and verify before sharing personal info online.
+        </p>
+        <br>
+        <div class="phishing_image">
+            <img src="images/extra/phishing.png">
+        </div>
+        <br><br>
+        <p>
+            Certainly! Here's an example of phishing:
+            <br><br>
+            Imagine you receive an email that looks like it's from your bank. 
+            The email claims that there's a security issue with your account and urges you to 
+            click on a link to update your login information to secure your account.
+            <br><br>
+            
+            The email might say something like:
+            <br><br>
+            <div style="background-color: rgb(232, 232, 236); width: fit-content; margin: 20px; padding: 15px; border-radius: 4px;">
+            <strong>Dear Customer,</strong>
+            <br><br><br>
+            We have noticed some unusual activity on your bank account. To ensure the security of your account, please click on the link below to verify your information.
+            <br><br>
+            <strong>[Click here to verify your account]</strong>
+            <br><br>
+            Thank you for your prompt attention to this matter.
+            <br><br>
+            Sincerely,<br>
+            Your Bank
+            <br>
+            </div>
+            
+            <p>However, if you carefully examine the email, you might notice some red flags:
+            <br><br>
+            <strong>1. **Generic Greeting:**</strong>The email starts with "Dear Customer" instead of addressing you by your name.
+            <br><br>
+            <strong>2. **Urgent Tone:**</strong> The email creates a sense of urgency, pressuring you to act quickly without thinking.
+            <br><br>
+            <strong>3. **Suspicious Link:**</strong> The link provided doesn't lead to the bank's official website. Hovering over the link (without clicking) might reveal a different website address.
+            <br><br>
+            <strong>4. **Unusual Sender Address:**</strong> The sender's email address might look slightly off or not match the bank's official domain.
+            <br><br>
+            If you were to click on the link and enter your login information, you could inadvertently provide your username and password to the attackers. They could then use this information to gain access to your bank account and potentially steal your money or commit other fraudulent activities.
+            In this example, the attackers are using phishing tactics by posing as your bank to trick you into revealing sensitive information. It's important to always verify the authenticity of such emails by contacting the organization directly using contact information you find on their official website.
+            </p>
+        
+        </p>
+        <br>
+        <br>
+</section>
+
+<!--Vulnerability-->>
+<section class="post_content">
+    <div class="container" style="margin: 15px; width: fit-content;">
+        <h2 id="before">Vulnerability?</h2>
+        <br>
+        <p>
+            A vulnerability in cybersecurity refers to a weakness or flaw in a system, network, 
+            application, or software that could potentially be exploited by malicious actors to compromise 
+            the security and integrity of that system. Vulnerabilities can range from programming errors and 
+            misconfigurations to design flaws and other weaknesses that could be leveraged to gain unauthorized access, 
+            steal sensitive information, disrupt services, or perform other malicious activities
+        </p>
+        <br>
+        <div class="vul_image">
+            <img src="images/extra/vul1-removebg-preview.png">
+        </div>
+        <br><br>
+        <p>
+            To find vulnerabilities in a website we can make use of SQL dorks or Google dorks. 
+            <br><br>
+            <strong>nikto -h https://computer-database.gatling.io/computers?p=0</strong>
+            
+        </p>
+        <br>
+        <br>
+
+
+</section>
+
+
 
 <br>
 <br>
