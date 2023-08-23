@@ -78,6 +78,12 @@ h2 {
     font-size: medium;
 }
 
+.list{
+    padding-left: 45px;
+    padding-right: 25px;
+    font-size: medium;
+}
+
 .phishing_image {
 width: center;
 size: 100vh;
@@ -101,3 +107,4 @@ align-items: center;
 height: 70vh;
 display: flex;
 }
+
