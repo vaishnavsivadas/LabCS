@@ -103,99 +103,60 @@
                 <li>DoS and DDoS attacks target one or more of the seven layers of the Open Systems Interconnection (OSI) model</li>
             </ul>
             </div>
-            <div class="phishing_image">
+            <div class="syn_image">
                 <img src="images/extra/dos.jpg">
             </div>
-        <br><br>
-        <h2 id="before">How Does Cross Site Scripting Work?</h2>
+        <h2 id="before">Types of DoS attacks</h2>
         <br>
         <p>
-            It is important to note that XSS attack’s mechanics will vary based on the type of attack being deployed. 
-            That said, most attacks follow the same process:
+            DoS and DDoS attacks have a variety of methods of attack. Common types of denial-of-service attacks include the following:
         </p>
-        <div>
-            <p style="padding: 30px;font-size: 18px; width:fit-content; text-align: left; background-color: rgb(232, 232, 236); margin: 25px; border-color: #0b1b5b; border-radius: 5px;">
-                &lt;BODY&gt; BACKGROUND = "javascript:alert('XSS')" &gt;&lt;/BODY&gt;
-            </p>
+        <br>
+        <div class="list">
+        <p>
+            <ul>
+            <li><strong>Application layer</strong></li> These attacks generate fake traffic to internet application servers, especially domain name system (DNS) servers or Hypertext Transfer Protocol (HTTP) servers. Some application layer DoS attacks flood the target servers with network data; others target the victim's application server or protocol, looking for vulnerabilities.
+            <br><br>
+            <li><strong>Buffer overflow</strong></li> This type of attack is one that sends more traffic to a network resource than it was designed to handle.
+            <br><br>
+            <li><strong>DNS amplification</strong></li> In a DNS DoS attack, the attacker generates DNS requests that appear to have originated from an IP address in the targeted network and sends them to misconfigured DNS servers managed by third parties. The amplification occurs as the intermediate DNS servers respond to the fake DNS requests. The responses from intermediate DNS servers to the requests may contain more data than ordinary DNS responses, which requires more resources to process. This can result in legitimate users being denied access to the service.
+            <br><br>
+            <li><strong>Ping of death</strong></li> These attacks abuse the ping protocol by sending request messages with oversized payloads, causing the target systems to become overwhelmed, to stop responding to legitimate requests for service and to possibly crash the victim's systems.
+            <br><br>
+            <li><strong>State exhaustion</strong></li> These attacks also known as Transmission Control Protocol (TCP) attacks -- occur when an attacker targets the state tables held in firewalls, routers and other network devices and fills them with attack data. When these devices incorporate stateful inspection of network circuits, attackers may be able to fill the state tables by opening more TCP circuits than the victim's system can handle at once, preventing legitimate users from accessing the network resource.
+            <br><br>
+            <li><strong>SYN flood</strong></li> This attack abuses the TCP handshake protocol by which a client establishes a TCP connection with a server. In a SYN flood attack, the attacker directs a high-volume stream of requests to open TCP connections with the victim server with no intention of completing the circuits. A successful attack can deny legitimate users access to the targeted server.
+            <br><br>
+            <li><strong>Teardrop</strong></li> These attacks exploit flaws like how older operating systems (OSes) handled fragmented IP packets. The IP specification enables packet fragmentation when the packets are too large to be handled by intermediary routers, and it requires packet fragments to specify fragment offsets. In teardrop attacks, the fragment offsets are set to overlap each other. Hosts running affected OSes are then unable to reassemble the fragments, and the attack can crash the system.
+            <br><br>
+        </ul>
+        </p>
         </div>
-        
-        <br>
-        <p>
-            <strong>1.</strong> The attacker identifies a place and method for which to inject malicious code into a web page. 
-            For this to be possible, the website must allow users to add content to the page through comments, 
-            posts, or contact fields.If the attacker has a defined target, they will employ social engineering tactics, 
-            including phishing and spoofing techniques to encourage the user to visit the site in question. Otherwise, 
-            the code is left for any user to discover.
-        </p>
-        <br>
-        <p>
-            <strong>2.</strong> The victim visits the website with the injected code. Their device will accept and execute the infected
-            script because it considers it part of the source code from a trusted site. Given that the code is not 
-            visible and most internet users do not understand common programming languages, such as JavaScript, 
-            it is difficult for the average user to detect XSS attacks.    
-        </p>
         <br>
     </div>
 
 </section>
 <br>
 
-<!--Phishing-->>
+<!--TCP SYN Flood Attack-->>
 <section class="post_content">
     <div class="container" style="margin: 15px; width: fit-content;">
-        <h2 id="before">What is Phishing ?</h2>
+        <h2 id="before">What is TCP?</h2>
         <br>
         <p>
-            Phishing is when cybercriminals send fake messages or create fake websites 
-            that seem real to trick you into giving them your private information, 
-            like passwords or credit card details. They pretend to be trustworthy sources, 
-            like banks or companies, to steal your sensitive data and use it for bad purposes. 
-            Always be careful and verify before sharing personal info online.
+            TCP stands for Transmission Control Protocol. It is one of the core protocols of the Internet Protocol Suite, commonly referred to as TCP/IP. TCP is responsible for ensuring reliable communication between devices over a network, particularly over the internet.
+            <br><br>
+            TCP provides a set of rules for how data packets should be exchanged between devices to ensure 
+            the integrity, reliability, and orderly delivery of data. It operates at the transport layer of 
+            the OSI (Open Systems Interconnection) model, which is a conceptual 
+            framework for understanding how different networking protocols interact.
         </p>
         <br>
-        <div class="phishing_image">
-            <img src="images/extra/phishing.png">
+        <div class="syn_image">
+            <img src="images/extra/syn-flood.png">
         </div>
         <br><br>
-        <p>
-            Certainly! Here's an example of phishing:
-            <br><br>
-            Imagine you receive an email that looks like it's from your bank. 
-            The email claims that there's a security issue with your account and urges you to 
-            click on a link to update your login information to secure your account.
-            <br><br>
-            
-            The email might say something like:
-            <br><br>
-            <div style="background-color: rgb(232, 232, 236); width: fit-content; margin: 20px; padding: 15px; border-radius: 4px;">
-            <strong>Dear Customer,</strong>
-            <br><br><br>
-            We have noticed some unusual activity on your bank account. To ensure the security of your account, please click on the link below to verify your information.
-            <br><br>
-            <strong>[Click here to verify your account]</strong>
-            <br><br>
-            Thank you for your prompt attention to this matter.
-            <br><br>
-            Sincerely,<br>
-            Your Bank
-            <br>
-            </div>
-            
-            <p>However, if you carefully examine the email, you might notice some red flags:
-            <br><br>
-            <strong>1. **Generic Greeting:**</strong>The email starts with "Dear Customer" instead of addressing you by your name.
-            <br><br>
-            <strong>2. **Urgent Tone:**</strong> The email creates a sense of urgency, pressuring you to act quickly without thinking.
-            <br><br>
-            <strong>3. **Suspicious Link:**</strong> The link provided doesn't lead to the bank's official website. Hovering over the link (without clicking) might reveal a different website address.
-            <br><br>
-            <strong>4. **Unusual Sender Address:**</strong> The sender's email address might look slightly off or not match the bank's official domain.
-            <br><br>
-            If you were to click on the link and enter your login information, you could inadvertently provide your username and password to the attackers. They could then use this information to gain access to your bank account and potentially steal your money or commit other fraudulent activities.
-            In this example, the attackers are using phishing tactics by posing as your bank to trick you into revealing sensitive information. It's important to always verify the authenticity of such emails by contacting the organization directly using contact information you find on their official website.
-            </p>
-        
-        </p>
+
         <br>
         <br>
 </section>
