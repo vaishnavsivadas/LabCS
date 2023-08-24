@@ -155,107 +155,93 @@
         <div class="syn_image">
             <img src="images/extra/syn-flood.png">
         </div>
+        <h2 id="before">What is TCP SYN flood attack?</h2>
+        <p>
+            A TCP SYN flood attack is a type of Denial of Service (DoS) attack that targets the three-way 
+            handshake process of the Transmission Control Protocol (TCP). This attack exploits the way TCP 
+            establishes connections between devices by overwhelming the target system's resources with a 
+            flood of SYN (synchronize) requests, leading to a denial of service
+            <br><br>
+            <strong>Three-Way Handshake</strong><br> 
+            In a TCP SYN flood attack, the attacker sends a massive number of SYN packets to the target system, 
+            making it appear as if many clients are trying to initiate connections. However, the attacker doesn't 
+            complete the handshake by sending the final ACK packet. As a result, the target system keeps resources 
+            reserved for each incomplete connection, waiting for the final ACK.
+            <br><br>
+            <strong>TCP SYN Flood Attack</strong><br> 
+            In the TCP three-way handshake, a client initiates a connection with a server by sending a SYN packet. 
+            The server responds with a SYN-ACK packet, acknowledging the request and indicating that it's ready 
+            to establish a connection. The client then sends an ACK packet back to the server, finalizing the 
+            connection establishment.
+            <br><br>
+            <strong>Attack Steps</strong><br> 
+            <div class="list">
+                <p>
+                    
+                    <ul>
+                    <li>The attacker sends a large number of SYN packets with spoofed source IP addresses (IP address forgery) to the target system.</li>
+                    <br>
+                    <li>The target system receives the SYN packets and responds with SYN-ACK packets, preparing to establish connections.</li>
+                    <br>
+                    <li>However, because the source IP addresses are spoofed or non-responsive, the target system doesn't receive the final ACK packets to complete the handshake.</li>
+                    <br>
+                    <li>The target system's resources become exhausted as it continues to maintain connections in a half-open state, waiting for the final ACK that will never arrive.</li>
+                    <br>
+                    <li>Legitimate users attempting to establish legitimate connections are denied access due to the resource exhaustion caused by the flood of incomplete connections.</li>
+                    <br>
+                    </ul>
+                </p>
+                </div>
+                <p>It's important to note that while SYN flood attacks are a significant threat, they are just one example of the many ways attackers can exploit vulnerabilities in networking protocols to disrupt services and cause denial of service.</p>
+        </p>
         <br><br>
 
         <br>
         <br>
 </section>
 
-<!--SQL Injection-->>
+<!--Sniffing-->>
 <section class="post_content">
     <div class="container" style="margin: 15px; width: fit-content;">
-        <h2 id="before">SQL Injection?</h2>
+        <h2 id="before">Sniffing?</h2>
         <br>
         <p>
-            SQL injection is a type of cyber attack where malicious actors exploit vulnerabilities in an application's input validation 
-            to execute unauthorized SQL queries. It occurs when user inputs are not properly sanitized before being used in database 
-            queries, allowing attackers to manipulate these inputs to gain unauthorized access to the database or perform other malicious 
-            actions.
+            Network sniffing, also known as packet sniffing or packet analysis, 
+            refers to the process of capturing and analyzing data packets as they 
+            travel across a computer network. This practice is often used for legitimate 
+            purposes such as network troubleshooting, network management, and security monitoring. 
+            However, it can also be exploited for malicious activities.
         </p>
         <br>
         <div class="sql_image">
-            <img src="images/extra/sqlinjection.jpg">
+            <img src="images/extra/sniffing.png">
         </div>
         <br><br>
-        <div class="">
+        <div class="list">
             <p>
-                SQL injection is a code injection technique that might destroy your database.
+                
+                <ul>
+                <li>Step 1: User enter his username & password through wifi zone.</li>
                 <br>
-                SQL injection is one of the most common web hacking techniques.
+                <li>Step 2: Attacker listen to the packets sent through sniffing in the wifi zone.</li>
                 <br>
-                SQL injection is the placement of malicious code in SQL statements, via web page input.
+                <li>Step 3: Attacker will retrieve the username and password typed by the user.</li>
+                <br>
+                <li>Step 4: Now, Attacker will login into the user account and get the confidential information.</li>
+                <br>
+                <br>
+                </ul>
             </p>
-        </div>
-        <br><br>
-        <h2 id="before">How SQL Injection Works?</h2>
-        <br>
+            </div>
+        <h2 id="before">How Sniffing Works?</h2>
         <p>
-        <strong>Input:</strong>Web applications often take user inputs, like forms, search boxes, or URLs, and use them in SQL queries to interact with a database.
-        <br><br>
-        <strong>Lack of Sanitization:</strong>If the application doesn't properly validate or sanitize these inputs, attackers can inject malicious SQL code into them.
-        <br><br>
-        <strong>Manipulating Queries:</strong> Attackers insert SQL commands into input fields to manipulate the application's SQL queries. This can lead to unintended actions like unauthorized access, data leakage, or even modifying or deleting data.
-        </p>
-        <br><br>
-        <p>Suppose a website has a login form:</p>
-        <p style="background-color: rgb(232, 232, 236); width: fit-content; margin: 20px; padding: 15px; border-radius: 4px;">SELECT * FROM users WHERE username = '&lt;input_username&gt;' AND password = '&lt;input_password&gt;';</p>
-        <br>
-        <p >If the application doesn't sanitize input correctly, an attacker could input ' OR '1'='1 as the username and ' OR '1'='1 as the password. The modified query would become:</p>
-        <p style="background-color: rgb(232, 232, 236); width: fit-content; margin: 20px; padding: 15px; border-radius: 4px;">SELECT * FROM users WHERE username = '' OR '1'='1' AND password = '' OR '1'='1';</p>
-
-        <p>SQL injection is a serious threat that can lead to data breaches and unauthorized access. Proper input validation, using prepared statements, and staying informed about secure coding practices are crucial for preventing these attacks.</p>
-        <br>
-</section>
-
-
-
-
-<!--Vulnerability-->>
-<section class="post_content">
-    <div class="container" style="margin: 15px; width: fit-content;">
-        <h2 id="before">Vulnerability?</h2>
-        <br>
-        <p>
-            A vulnerability in cybersecurity refers to a weakness or flaw in a system, network, 
-            application, or software that could potentially be exploited by malicious actors to compromise 
-            the security and integrity of that system. Vulnerabilities can range from programming errors and 
-            misconfigurations to design flaws and other weaknesses that could be leveraged to gain unauthorized access, 
-            steal sensitive information, disrupt services, or perform other malicious activities.
-        </p>
-        <br>
-        <div class="vul_image">
-            <img src="images/extra/vul1-removebg-preview.png">
-        </div>
-        <br><br>
-        <p>
-            Nikto is a popular open-source web server scanner used to discover various vulnerabilities on web servers. 
-            It's often used for security assessments and penetration testing to identify potential weaknesses in web applications 
-            and server configurations.
-        </p>
-        <br>
-        <p>In Kali Linux, Nikto is pre-installed and can be used from the command line. Here's a basic example of how to use Nikto:</p>
-        <br>
-        <p>
-            <strong>Steps to perform nikto tool in Kali Linux</strong>
-            <br><br>
-            1. Open a terminal in Kali Linux.
-            <br><br>
-            2. Use the following command to scan a target website: Replace &lt;target-website&gt; with the actual URL of the website you want to scan.
-            <strong><p>nikto -h &lt;target-website&gt;</p></strong>
-            <br>    
-        <p>Nikto will start scanning the target website and display the results in the terminal. It will provide information about potential vulnerabilities, misconfigurations, and other security issues.</p>
-        <br><br>        
-        <p>To find vulnerabilities in a website we can make use of SQL dorks or Google dorks. 
-        <br>
-        <strong><p>nikto -h https://computer-database.gatling.io/computers?p=0</p></strong>
-        
-        </p>
-        <img src="images/extra/vul2.png" style="padding-left:25px; padding-top: 25px;">    
+            Network sniffing involves capturing and inspecting data packets that are transmitted between devices on a network. 
+            These packets contain information such as source and destination addresses, protocols used, and the actual data 
+            being transmitted. Sniffing can be done using 
+            specialized software or hardware tools called packet sniffers or network analyzers.
         </p>
         <br>
 </section>
-
-
 
 <br>
 <br>
