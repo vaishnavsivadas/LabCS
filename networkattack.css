@@ -84,13 +84,11 @@ h2 {
     font-size: medium;
 }
 
-.syn_image {
+.phishing_image {
 width: center;
-size: 500vh;
+size: 100vh;
 justify-content: center;
 align-items: center;
-padding-bottom: 10px;
-margin-left: 500vh;
 height: 100vh;
 display: flex;
 }
@@ -109,4 +107,3 @@ align-items: center;
 height: 70vh;
 display: flex;
 }
-
