@@ -71,76 +71,15 @@
 <br>
 <div class="course" >
     <center><div class="cbox1">
-    <div class="det1"><a href="#content1"><img src="">DoS Attack</a></div>
-    <div class="det1"><a href="#content2"><img src="">TCP SYN Flood Attack</a></div>
+    <div class="det1"><a href="#content1"><img src="">TCP SYN Flood Attack</a></div>
+    <div class="det1"><a href="#content2"><img src="">DoS Attack</a></div>
     <div class="det1"><a href="#content3"><img src="">Sniffing</a></div>
     </div></center>
 </div>
 
-<!--DOS Attack-->>
-<section class="post_content">
-    <div class="container" style="margin: 15px; width: fit-content;" id="content1">
-        <h2 id="before">DOS (Denial Of Service) Attack</h2>
-        <br>
-        <p>
-            <strong>A Denial of Service (DoS)</strong>attack is a type of cyber attack that aims to disrupt the 
-            availability of a computer system, network, or service by overwhelming it with a high volume of traffic. 
-            The goal of a DoS attack is to make the targeted system or service unavailable to legitimate users, 
-            essentially denying them access. DoS attacks can last from a few hours to many months, costing companies and consumers time 
-            and money while their resources and services are unavailable.
-            <br><br>
-            <div class="list">
-            <ul>
-                <li>Attackers in these types of attacks typically flood web servers, systems or networks with traffic that overwhelms the victim's resources and makes it difficult or impossible for anyone else to access them.</li>
-            </ul>
-            <br>
-            <ul>
-                <li>DoS and DDoS attacks often take advantage of vulnerabilities in networking protocols and how they handle network traffic. For example, an attacker might overwhelm the service by transmitting many packets to a 
-                    vulnerable network service from different Internet Protocol (IP) addresses.</li>
-            </ul>
-            <br>
-            <ul>
-                <li>DoS and DDoS attacks target one or more of the seven layers of the Open Systems Interconnection (OSI) model</li>
-            </ul>
-            </div>
-            <div class="syn_image">
-                <img src="images/extra/dos.jpg">
-            </div>
-        <h2 id="before">Types of DoS attacks</h2>
-        <br>
-        <p>
-            DoS and DDoS attacks have a variety of methods of attack. Common types of denial-of-service attacks include the following:
-        </p>
-        <br>
-        <div class="list">
-        <p>
-            <ul>
-            <li><strong>Application layer</strong></li> These attacks generate fake traffic to internet application servers, especially domain name system (DNS) servers or Hypertext Transfer Protocol (HTTP) servers. Some application layer DoS attacks flood the target servers with network data; others target the victim's application server or protocol, looking for vulnerabilities.
-            <br><br>
-            <li><strong>Buffer overflow</strong></li> This type of attack is one that sends more traffic to a network resource than it was designed to handle.
-            <br><br>
-            <li><strong>DNS amplification</strong></li> In a DNS DoS attack, the attacker generates DNS requests that appear to have originated from an IP address in the targeted network and sends them to misconfigured DNS servers managed by third parties. The amplification occurs as the intermediate DNS servers respond to the fake DNS requests. The responses from intermediate DNS servers to the requests may contain more data than ordinary DNS responses, which requires more resources to process. This can result in legitimate users being denied access to the service.
-            <br><br>
-            <li><strong>Ping of death</strong></li> These attacks abuse the ping protocol by sending request messages with oversized payloads, causing the target systems to become overwhelmed, to stop responding to legitimate requests for service and to possibly crash the victim's systems.
-            <br><br>
-            <li><strong>State exhaustion</strong></li> These attacks also known as Transmission Control Protocol (TCP) attacks -- occur when an attacker targets the state tables held in firewalls, routers and other network devices and fills them with attack data. When these devices incorporate stateful inspection of network circuits, attackers may be able to fill the state tables by opening more TCP circuits than the victim's system can handle at once, preventing legitimate users from accessing the network resource.
-            <br><br>
-            <li><strong>SYN flood</strong></li> This attack abuses the TCP handshake protocol by which a client establishes a TCP connection with a server. In a SYN flood attack, the attacker directs a high-volume stream of requests to open TCP connections with the victim server with no intention of completing the circuits. A successful attack can deny legitimate users access to the targeted server.
-            <br><br>
-            <li><strong>Teardrop</strong></li> These attacks exploit flaws like how older operating systems (OSes) handled fragmented IP packets. The IP specification enables packet fragmentation when the packets are too large to be handled by intermediary routers, and it requires packet fragments to specify fragment offsets. In teardrop attacks, the fragment offsets are set to overlap each other. Hosts running affected OSes are then unable to reassemble the fragments, and the attack can crash the system.
-            <br><br>
-        </ul>
-        </p>
-        </div>
-        <br>
-    </div>
-
-</section>
-<br>
-
 <!--TCP SYN Flood Attack-->>
 <section class="post_content">
-    <div class="container" style="margin: 15px; width: fit-content;" id="content2">
+    <div class="container" style="margin: 15px; width: fit-content;" id="content1">
         <h2 id="before">What is TCP?</h2>
         <br>
         <p>
@@ -221,7 +160,7 @@
                 4. Let us use the auxillary by typing <strong>use auxiliary /dos/tcp/synflood</strong> and also we can view 
                 the options available within the auxiliary in kali linux using <strong>show options</strong>
             </p>
-            <img src="images/extra/tcp5.png" style="padding-left:25px; padding-top: 25px;width: 1000px;">    
+            <img src="images/extra/tcp5.png" style="padding-left:25px; padding-top: 25px;width: 800px;">    
             <br><br>
 
             <img src="images/extra/tcp6.png" style="padding-left:25px; padding-top: 25px;width: 1000px;">    
@@ -295,7 +234,70 @@
         </p>
         <br>
         <br>
+        
 </section>
+
+
+<!--DOS Attack-->>
+<section class="post_content">
+    <div class="container" style="margin: 15px; width: fit-content;" id="content2">
+        <h2 id="before">DOS (Denial Of Service) Attack</h2>
+        <br>
+        <p>
+            <strong>A Denial of Service (DoS)</strong>attack is a type of cyber attack that aims to disrupt the 
+            availability of a computer system, network, or service by overwhelming it with a high volume of traffic. 
+            The goal of a DoS attack is to make the targeted system or service unavailable to legitimate users, 
+            essentially denying them access. DoS attacks can last from a few hours to many months, costing companies and consumers time 
+            and money while their resources and services are unavailable.
+            <br><br>
+            <div class="list">
+            <ul>
+                <li>Attackers in these types of attacks typically flood web servers, systems or networks with traffic that overwhelms the victim's resources and makes it difficult or impossible for anyone else to access them.</li>
+            </ul>
+            <br>
+            <ul>
+                <li>DoS and DDoS attacks often take advantage of vulnerabilities in networking protocols and how they handle network traffic. For example, an attacker might overwhelm the service by transmitting many packets to a 
+                    vulnerable network service from different Internet Protocol (IP) addresses.</li>
+            </ul>
+            <br>
+            <ul>
+                <li>DoS and DDoS attacks target one or more of the seven layers of the Open Systems Interconnection (OSI) model</li>
+            </ul>
+            </div>
+            <div class="syn_image">
+                <img src="images/extra/dos.jpg">
+            </div>
+        <h2 id="before">Types of DoS attacks</h2>
+        <br>
+        <p>
+            DoS and DDoS attacks have a variety of methods of attack. Common types of denial-of-service attacks include the following:
+        </p>
+        <br>
+        <div class="list">
+        <p>
+            <ul>
+            <li><strong>Application layer</strong></li> These attacks generate fake traffic to internet application servers, especially domain name system (DNS) servers or Hypertext Transfer Protocol (HTTP) servers. Some application layer DoS attacks flood the target servers with network data; others target the victim's application server or protocol, looking for vulnerabilities.
+            <br><br>
+            <li><strong>Buffer overflow</strong></li> This type of attack is one that sends more traffic to a network resource than it was designed to handle.
+            <br><br>
+            <li><strong>DNS amplification</strong></li> In a DNS DoS attack, the attacker generates DNS requests that appear to have originated from an IP address in the targeted network and sends them to misconfigured DNS servers managed by third parties. The amplification occurs as the intermediate DNS servers respond to the fake DNS requests. The responses from intermediate DNS servers to the requests may contain more data than ordinary DNS responses, which requires more resources to process. This can result in legitimate users being denied access to the service.
+            <br><br>
+            <li><strong>Ping of death</strong></li> These attacks abuse the ping protocol by sending request messages with oversized payloads, causing the target systems to become overwhelmed, to stop responding to legitimate requests for service and to possibly crash the victim's systems.
+            <br><br>
+            <li><strong>State exhaustion</strong></li> These attacks also known as Transmission Control Protocol (TCP) attacks -- occur when an attacker targets the state tables held in firewalls, routers and other network devices and fills them with attack data. When these devices incorporate stateful inspection of network circuits, attackers may be able to fill the state tables by opening more TCP circuits than the victim's system can handle at once, preventing legitimate users from accessing the network resource.
+            <br><br>
+            <li><strong>SYN flood</strong></li> This attack abuses the TCP handshake protocol by which a client establishes a TCP connection with a server. In a SYN flood attack, the attacker directs a high-volume stream of requests to open TCP connections with the victim server with no intention of completing the circuits. A successful attack can deny legitimate users access to the targeted server.
+            <br><br>
+            <li><strong>Teardrop</strong></li> These attacks exploit flaws like how older operating systems (OSes) handled fragmented IP packets. The IP specification enables packet fragmentation when the packets are too large to be handled by intermediary routers, and it requires packet fragments to specify fragment offsets. In teardrop attacks, the fragment offsets are set to overlap each other. Hosts running affected OSes are then unable to reassemble the fragments, and the attack can crash the system.
+            <br><br>
+        </ul>
+        </p>
+        </div>
+        <br>
+    </div>
+
+</section>
+<br>
 
 <!--Sniffing-->>
 <section class="post_content">
