@@ -262,10 +262,37 @@
             <br><br>
         </p>
 
-        <br><br>
+        <h2 id="before">Defensive Measures</h2><br>
+        <p>
+            Performing TCP SYN flood attack against your website is essential for ensuring the availability and stability of network services. 
+            SYN flood attacks involve sending a large number of TCP SYN requests to overwhelm a target server's 
+            resources and prevent it from processing legitimate connections. <br><br>
 
+            As a defensive measure, firstly WireShark could be used to analyse and filter out specific ip which is transmitting packets in unusual numbers.  
+            Further, this ip could be blocked from sending any packets by adding a new rule in the host machine.
+            <br><br>
+            The steps to perform the same is as follows
 
-
+        </p>
+        <br>
+        <p>
+            <strong>Step 1:</strong> Open Command Prompt in the victim PC and try to set a new rule.<br>
+            <p style="background-color: rgb(232, 232, 236); width: fit-content; margin: 20px; padding: 15px; border-radius: 4px;">
+                netsh advfirewall firewall add rule name="Block IP" dir=in action=block remoteip=&lt;IP_ADDRESS&gt;
+            </p><br>
+        </p>
+        <p>
+            <strong>Step 2:</strong> To revert back to the default state once the threat has been resolved, deletion of the above set rule could be performed as below. <br>
+            <p style="background-color: rgb(232, 232, 236); width: fit-content; margin: 20px; padding: 15px; border-radius: 4px;">
+                netsh advfirewall firewall delete rule name="Block IP" dir=in remoteip=&lt;IP_ADDRESS&gt;
+            </p><br>
+        </p>
+        <p>
+            <strong>Step 3:</strong> To check for the existence of a particular rule, the below command could be used.<br>
+            <p style="background-color: rgb(232, 232, 236); width: fit-content; margin: 20px; padding: 15px; border-radius: 4px;">
+                netsh advfirewall firewall show rule name="Block IP"
+            </p><br>
+        </p>
         <br>
         <br>
 </section>
