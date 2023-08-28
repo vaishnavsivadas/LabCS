@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<title>CS Lab Module</title>
+	<meta name="desciption" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="enlighterjs.min.css">
+    <link rel="stylesheet" type="text/css" href="webattack.css">
+    <script src="enlighterjs.min.js"></script>
+	<!-- BS JavaScript -->
+	<script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+	<script>
+		$(window).on('scroll', function(){
+  			if($(window).scrollTop()){
+  			  $('nav').addClass('black');
+ 			 }else {
+ 		   $('nav').removeClass('black');
+ 		 }
+		})
+	</script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header id="header">
+    <nav>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html">Training Modules</a></li>
+            <li><a href="#services_section">Assessments</a></li>
+            <li><a href="#contactus_section">Feedback</a></li>
+            <li><a class="get-started" href="login.html">Get Started</a></li>
+        </ul>
+        
+    </nav>
+    
+    <div class="head-container">
+        <div class="quote">
+            <p style="padding-left: 150px;">Kali Linux</p>
+        </div>
+        <div class="svg-image">
+            <img src="images/extra/kali-bright.png" alt="svg">
+        </div>
+    </div>
+</header>
+
+<!-- Some Popular Subjects -->
+<div class="title" id="course_section">
+    <span>What is Kali Linux?</span>
+</div>
+<br>
+<p style="padding: 60px;font-size: 18px; text-align: center; background-color: rgb(186, 192, 212); margin: 15px;border-color: #0b1b5b; border-radius: 15px;"> 
+    Kali Linux is a specialized Linux distribution designed for penetration testing, digital forensics, 
+    and security auditing. It is maintained and developed by Offensive Security, a cybersecurity training and 
+    penetration testing services provider. Kali Linux is widely used by cybersecurity professionals, ethical hackers, 
+    and researchers to assess the security of systems, networks, and applications.
+    <br><br>
+    Kali Linux provides a wide range of tools and utilities for various aspects of information security and 
+    penetration testing. These tools include network analysis, vulnerability scanning, wireless attacks, 
+    password cracking, forensics, reverse engineering, and more. It comes pre-installed with hundreds of 
+    security-focused software packages, making it a comprehensive toolkit for cybersecurity professionals 
+    and enthusiasts.
+</p><br>
+
+<br>
+
+<!--Kali Install-->>
+<section class="post_content">
+    <div class="container" style="margin: 15px; width: fit-content;">
+        <h2 id="before">Kali Installation</h2>
+        <p>
+            To install Kali Linux, you need to follow these general steps. Please note that the process can 
+            vary depending on your hardware, system configuration, and the version of Kali Linux you're using. 
+            Make sure to back up your important data before attempting any installation.
+            <br><br>
+            <ol style="padding-left: 45px;">
+                <li><strong>Kali Linux ISO:</strong><br>
+                    <ul style="list-style-type:circle;padding-left: 20px;">
+                        <li>Visit the official Kali Linux website <strong>(https://www.kali.org/downloads/)</strong> and download the ISO image of the version you want to install. Choose the appropriate architecture (32-bit or 64-bit) and download the ISO file.</li>
+                    </ul>
+                <br>
+                <li><strong>Create Bootable Media:</strong><br>
+                    <ul style="list-style-type:circle;padding-left: 20px;">
+                        <li>USB Drive: You can use tools like Rufus (for Windows) or balenaEtcher (for Windows, macOS, and Linux) to create a bootable USB drive from the downloaded ISO file.</li>
+                        <li>DVD: Burn the ISO image to a blank DVD using a DVD burning software.</li>
+                    </ul>              
+                <br>
+                <li><strong>Boot from Bootable Media:</strong><br>
+                    <ul style="list-style-type:circle;padding-left: 20px;">
+                        <li>Insert the bootable USB drive or DVD into your computer.</li>
+                        <li>Make sure the USB drive or DVD drive is set as the first boot option.</li>
+                        <li>Save the changes and exit the BIOS/UEFI settings.</li>
+                    </ul>       
+                <br>
+
+                <li><strong>Install Kali Linux:</strong><br>
+                    <ul style="list-style-type:circle;padding-left: 20px;">
+                        <li>The Kali Linux boot menu will appear. Choose the "Install" option to start the installation process.</li>
+                        <li>Follow the on-screen instructions to configure your language, location, keyboard layout, and network settings.</li>
+                        <li>When prompted, choose the installation type. You can choose to install alongside an existing operating system, replace an existing operating system, or manually partition the disk.</li>
+                    </ul>       
+                <br>
+
+                <li><strong>Configure Disk Partitioning:</strong><br>
+                    <ul style="list-style-type:circle;padding-left: 20px;">
+                        <li>If you're new to disk partitioning, you can choose the option to use the entire disk, which will automatically set up the partitions for you.</li>
+                        <li>If you're experienced and want to manually partition, choose the manual option and create partitions for root (/), swap, and, optionally, a separate partition for /home.</li>
+                    </ul>       
+                <br>
+
+                <li><strong>Set Up User and Password:</strong><br>
+                    <ul style="list-style-type:circle;padding-left: 20px;">
+                        <li>You'll be prompted to create a user account (username) and password. Provide the necessary information.</li>
+                    </ul>       
+                <br>
+
+                <li><strong>Login to Kali Linux:</strong><br>
+                    <ul style="list-style-type:circle;padding-left: 20px;">
+                        <li>After rebooting, you'll see the GRUB bootloader menu. Select Kali Linux from the list and press Enter.</li>
+                        <li>Log in using the username and password you set during installation.</li>
+                    </ul>       
+                <br>
+
+                <li><strong>Update and Customize:</strong><br>
+                    <ul style="list-style-type:circle;padding-left: 20px;">
+                        <li>After logging in, open a terminal and run the following commands to update the system and install any available updates:</li>
+                        <div>
+                            <p style="padding: 30px;font-size: 18px; width:fit-content; text-align: left; background-color: rgb(232, 232, 236); margin: 25px; border-color: #0b1b5b; border-radius: 5px;">
+                                sudo apt update<br>
+                                sudo apt upgrade
+                            </p>
+                        </div>
+                        <li>Customize your Kali Linux environment and install additional software as needed.</li>
+                    </ul>       
+                <br>
+              </ol>
+              <p>
+                Please note that this is a general overview of the installation process. The actual steps may vary depending on your hardware and specific preferences. Always refer to the official Kali Linux documentation for the most up-to-date and detailed installation instructions: https://www.kali.org/docs/installation/
+              </p>
+        </p>
+        <br>
+    </div>
+</section>
+<br>
+
+
+<!--Tools-->>
+<section class="post_content">
+    <div class="container" style="margin: 15px; width: fit-content;">
+        <h2 id="before">Security Tools used in Kali Linux</h2>
+        <p>
+            Kali Linux comes with a vast array of security and penetration testing tools. The tools you find most 
+            important and commonly used may vary depending on your specific tasks and goals. However, here are some 
+            of the important and widely used tools found in Kali Linux:
+            <br><br>
+            <ul style="padding-left: 45px;">
+                <li>Nmap</li>
+                <li>Metasploit Framework</li>
+                <li>Wireshark</li>
+                <li>Burp Suite</li>
+                <li>Hydra</li>
+                <li>John the Ripper</li>
+                <li>Aircrack-ng</li>
+                <li>Nikto</li>
+                <li>Sqlmap</li>
+                <li>Gobuster</li>
+                <li>Netcat</li>
+                <li>Hashcat</li>
+                <li>Nessus</li>
+                <li>Maltego</li>
+                <li>Recon-ng</li>
+                <li>Dirb</li>
+                <li>GDB (GNU Debugger)</li>
+                <li>Radare2</li>
+                <li>Snort</li>
+              </ul>
+        </p>
+        <br>
+    </div>
+</section>
+<br>
+
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="left-col">
+            </br></br>
+            <div class="quote">
+                <p style="color: #fff">Cyber Security Self Study Platform</p>
+            </div>
+            <div class="logo"></div>
+            <p class="rights-text">Copyright © 2021</p>
+            <br><p><img src="images/icon/location.png">&nbsp;ITS, INS Valsura, Jamnagar, Gujarat-360115</p>
+        </div>
+        <div class="right-col">
+            <div class="logo">
+                <img src="images/extra/valsura.png">
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
